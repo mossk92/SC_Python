@@ -58,12 +58,12 @@ names = ["Brooke","Carlie","Katie","Stacey"]
 #Ask the user to continually enter names until a blank string is entered
 enter_name = "Katie"
 
-while enter_name != "":
-    enter_name = input("Guess a name: ")
+    # while enter_name != "":
+        # enter_name = input("Guess a name: ")
 
 #Ask the user continually enter password until a password that you sethas been given
 user_input=""
 password="fruitloops"
 
-while password != user_input:
-    user_input = input("Enter Password: ")
+    # while password != user_input:
+        # user_input = input("Enter Password: ")
