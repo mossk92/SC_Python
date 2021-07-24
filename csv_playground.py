@@ -91,21 +91,35 @@ with open("data/colours_20_simple.csv") as csv_file:
 print()
 print("Q2: Amend order of Colour data")
 
-with open("data/colours_20_simple.csv") as csv_file:
-    csv_reader = csv.reader(csv_file)
+with open("data/colours_20_simple.csv") as csv_file_simple:
+    csv_reader = csv.reader(csv_file_simple)
     next(csv_reader)
             #this takes the first row and discards it
     for column in csv_reader:
         print(f'{column[2]}, Hex: {column[1]}, RGB: {column[0]}')
 
 print()
-print("Q3: ?")
+print("Q3: Amending and Remvoing Data")
+
+with open("data/colours_20.csv") as csv_file:
+    csv_reader = csv.reader(csv_file)
+    next(csv_reader)
+    for column in csv_reader:
+        print(f'{column[4]}, Hex: {column[2]}, RGB: {column[1]}')
+
+print()
+print("Q4: Count Colours from Column")
 
 
 
-print("Q4: ?")
 
 
+with open("data/colours_20.csv") as csv_file:
+    csv_reader = csv.reader(csv_file)
+    next(csv_reader)
+    for column in csv_reader:
+        if column[4] == 'ABC':
+          print(row[13],row[8])
 
 print()
 print("Q5: ?")
