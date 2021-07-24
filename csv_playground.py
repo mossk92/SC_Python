@@ -3,6 +3,7 @@ print("-----------------------------------------------")
 
 print("Reading CSV:")
 import csv
+from typing import Collection, Counter
 
 with open("data/dogs_are_awesome.txt", mode = "r", encoding = "utf-8") as csv_file:
         #mode default position is r, so this is not always required. r = read, w = write
@@ -110,26 +111,49 @@ with open("data/colours_20.csv") as csv_file:
 print()
 print("Q4: Count Colours from Column")
 
-
-
-
+countRed = 0
+countGreen = 0
+countBlue = 0
+countYellow = 0
 
 with open("data/colours_20.csv") as csv_file:
     csv_reader = csv.reader(csv_file)
     next(csv_reader)
     for column in csv_reader:
-        if column[4] == 'ABC':
-          print(row[13],row[8])
+        if "red" in column[4]:
+            countRed += 1
+        if "green" in column[4]:
+            countGreen += 1
+        if "blue" in column[4]:
+            countBlue += 1
+        if "yellow" in column[4]:
+            countYellow += 1
+        
+print(f'Red: {countRed}')
+print(f'Green: {countGreen}')
+print(f'Blue: {countBlue}')
+print(f'Yellow: {countYellow}')
+
 
 print()
-print("Q5: ?")
+print("Q5: Finding Min and Max Values")
+import csv
 
+with open("data/galaxies.csv") as csv_gal:
+    csv_reader = csv.reader(csv_gal)
+    for sheet in csv_reader:
+        print(sheet)
 
+def minVel():
+    return min(sheet[2])
 
-print()
-print("Q6: ?")
+    # minVel, maxVel = [],[]
+    # for column in csv_reader:
+    #     minVel = min(column[2))
+    #     maxVel = max(column[2])
 
-
+print(f'minGal has the min velocity of {minVel()}')
+# print(f'maxGal has the max velocity of {maxVel}')
 
 print()
 print('########################################################')
