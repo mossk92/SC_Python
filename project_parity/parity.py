@@ -87,8 +87,13 @@ def flip_cell(x_pos, y_pos, grid):
     Returns:
         The same grid, with a cell switched.
     """
-    pass
 
+    if grid[y_pos][x_pos] == "X":
+        grid[y_pos][x_pos] = "O"
+    else:
+        grid[y_pos][x_pos] = "X"
+
+    return(grid)
 
 def find_flipped_cell(grid):
     """Determines which cell/cell in the grid was flipped.
@@ -108,4 +113,35 @@ def find_flipped_cell(grid):
             d = (1, 1)
         If 'a' was the flipped letter, this function would return: [0, 0]
     """
-    pass
+    x_pos_count = 0
+    x_pos = 0
+    y_pos = 0
+
+    for row in grid:
+        count_x = 0      
+        for char in row:
+            if char == 'X':
+                count_x += 1
+        if count_x % 2 != 0:
+            x_pos = x_pos_count
+        else:
+            x_pos_count += 1
+
+    if x_pos == 0:
+        x_pos = None
+
+    for i in range(len(grid[0])):
+        count_x = 0
+        for row in grid:
+            if row[i] == "X":
+                count_x += 1
+        if count_x % 2 != 0:
+            y_pos = i
+
+    if y_pos == 0:
+        y_pos = None
+
+    if x_pos_count == len(grid[0]):
+        return([None,None]) 
+    else:
+        return([y_pos,x_pos])
