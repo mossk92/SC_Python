@@ -1,4 +1,4 @@
-print("CLASSWORK")
+print("FUNCTIONS CLASSWORK")
 print("-----------------------------------------------")
 
 print("Simple Function:")

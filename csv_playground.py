@@ -1,4 +1,4 @@
-print("CLASSWORK")
+print("CSV CLASSWORK")
 print("-----------------------------------------------")
 
 print("Reading CSV:")
@@ -143,17 +143,6 @@ with open("data/galaxies.csv") as csv_gal:
     csv_reader = csv.reader(csv_gal)
     for sheet in csv_reader:
         print(sheet)
-
-def minVel():
-    return min(sheet[2])
-
-    # minVel, maxVel = [],[]
-    # for column in csv_reader:
-    #     minVel = min(column[2))
-    #     maxVel = max(column[2])
-
-print(f'minGal has the min velocity of {minVel()}')
-# print(f'maxGal has the max velocity of {maxVel}')
 
 print()
 print('########################################################')

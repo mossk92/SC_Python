@@ -1,4 +1,4 @@
-print("CLASSWORK")
+print("VARIABLES CLASSWORK")
 print("-----------------------------------------------")
 
 print("String:")

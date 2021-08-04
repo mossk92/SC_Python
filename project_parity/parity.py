@@ -28,7 +28,7 @@ def add_column(grid):
         The same grid, with a new column added.
     """
     for row in grid:
-        count_x = 0      
+        count_x = 0    
         for char in row:
             if char == 'X':
                 count_x += 1
